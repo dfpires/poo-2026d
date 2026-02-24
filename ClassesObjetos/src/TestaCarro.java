@@ -7,11 +7,13 @@ public class TestaCarro {
         Carro obj2 = new Carro("GM", "Onix", 1.3f, 2021, "B", "Preto");
         System.out.println(obj2.toString());
         obj2.ligar();
+        obj2.acelerar(80);
         System.out.println(obj2.toString());
 
         Carro obj3 = new Carro("Volks", "Gol", 1.0f, 2022, "C", "Branco");
         System.out.println(obj3.toString());
         obj3.ligar();
+        obj3.acelerar(100);
         System.out.println(obj3.toString());
     }
 }
