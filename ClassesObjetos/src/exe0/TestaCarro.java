@@ -1,13 +1,17 @@
+package exe0;
 public class TestaCarro {
     public static void main(String args[]){
         // instância obj1
         Carro obj1 = new Carro("Fiat", "Palio", 1.6f, 2020, "A", "Azul");
         System.out.println(obj1.toString());
+        obj1.acelerar(80);
 
         Carro obj2 = new Carro("GM", "Onix", 1.3f, 2021, "B", "Preto");
         System.out.println(obj2.toString());
         obj2.ligar();
         obj2.acelerar(80);
+        obj2.frear(50);
+        obj2.frear(40);
         System.out.println(obj2.toString());
 
         Carro obj3 = new Carro("Volks", "Gol", 1.0f, 2022, "C", "Branco");
@@ -15,5 +19,8 @@ public class TestaCarro {
         obj3.ligar();
         obj3.acelerar(100);
         System.out.println(obj3.toString());
+
+        obj2.desligar();
+        obj3.desligar();
     }
 }

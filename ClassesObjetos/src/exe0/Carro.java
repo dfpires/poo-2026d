@@ -1,3 +1,5 @@
+package exe0;
+
 public class Carro{
     // criando variáveis com visibilidade pública
     // qualquer outra classe pode acessar e alterar essas variáveis
@@ -17,18 +19,34 @@ public class Carro{
     public void ligar(){
         if (!this.motor) { // desligado
             this.motor = true;
+            System.out.println("Motor foi ligado");
         }
     }
-    // deligar o carro
-
+    // desligar o carro
+    public void desligar(){
+        if (this.motor){
+            this.motor = false;
+            this.velocidade = 0;
+            System.out.println("Motor foi desligado");
+        }
+    }
 
     // acelerar o carro de X unidades
     public void acelerar(float x){
         if (this.motor) {
-            this.velocidade = this.velocidade + x;
+            this.velocidade += x;
+            System.out.println("carro acelerado, valor atual " + this.velocidade);
         }
+        else System.out.println("Não foi possível acelerar");
     }
-
+    // frear
+    public void frear(float x){
+        if (this.motor && this.velocidade - x >= 0){
+            this.velocidade -= x;
+            System.out.println("carro freado, valor atual " + this.velocidade);
+        }
+        else System.out.println("Não foi possível frear");
+    }
     // converte o objeto em String
     public String toString(){
         // this representa o objeto que chama o método
