@@ -16,6 +16,10 @@ public class TestaSmartTv {
         System.out.println(obj3.toString());
         obj3.setVolume(30);
         obj3.entrarYouTube();
+        obj3.aumentaVolume(80);
+        obj3.aumentaVolume(100);
+        obj3.diminuiVolume(30);
+        System.out.println(obj3.toString());
 
     }
 }
