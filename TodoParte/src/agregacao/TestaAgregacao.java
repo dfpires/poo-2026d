@@ -15,5 +15,7 @@ public class TestaAgregacao {
         google.adicionaFreeLancer(fl2);
         google.adicionaFreeLancer(fl3);
         System.out.println(google.toString());
+        google.removeFreeLancer(fl2);
+        System.out.println(google.toString());
     }
 }

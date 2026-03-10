@@ -16,10 +16,13 @@ public class Empresa {
         this.freeLancers = new ArrayList();
     }
     // adiciona um freelancer na empresa
+    // percebam que o objeto freeLancer já vem pronto - independência
     public void adicionaFreeLancer(FreeLancer freeLancer){
         this.freeLancers.add(freeLancer);
     }
     // remove um freelancer na empresa
+    // percebam que o objeto freeLancer já vem pronto - independência
+
     public void removeFreeLancer(FreeLancer freeLancer){
         this.freeLancers.remove(freeLancer);
     }
