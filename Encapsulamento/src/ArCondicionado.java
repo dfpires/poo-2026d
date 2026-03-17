@@ -14,7 +14,7 @@ public class ArCondicionado {
 
     // Construtor com parâmetros
     public ArCondicionado(String marca, String modelo, int temperatura) {
-        this.marca = marca;
+        this.setMarca(marca);
         this.modelo = modelo;
         this.setTemperatura(temperatura); // Usa o setter para validar a temp inicial
         this.ligado = false;
@@ -22,7 +22,12 @@ public class ArCondicionado {
 
     // Getters e Setters
     public String getMarca() { return marca; }
-    public void setMarca(String marca) { this.marca = marca; }
+    public void setMarca(String marca) {
+        if (marca.length() >= 3){
+            this.marca = marca;
+        }
+        else System.out.println("Marca inválida");
+    }
 
     public String getModelo() { return modelo; }
     public void setModelo(String modelo) { this.modelo = modelo; }
