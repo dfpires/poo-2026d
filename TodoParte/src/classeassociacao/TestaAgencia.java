@@ -12,8 +12,10 @@ public class TestaAgencia {
         LocalDateTime dataVoo = LocalDateTime.of(2026, 7, 12, 10, 0);
         Voo vo1 = new Voo(999, "Congonhas", "BRB", dataVoo);
 
-        System.out.println(pas1.toString());
-        System.out.println(vo1.toString());
+        LocalDateTime agora = LocalDateTime.now();
+        Reserva re1 = new Reserva(33, agora, 78, pas1, vo1);
+
+        System.out.println(re1.toString());
 
     }
 }
