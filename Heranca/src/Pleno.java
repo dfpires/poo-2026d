@@ -23,13 +23,13 @@ public class Pleno extends Desenvolvedor{
     }
     @Override
     public double calcularBonus(){
-        return super.calcularBonus() + 500;
+
+        return super.calcularBonus() + 1000;
     }
     @Override
     public String toString() {
         return "Pleno{" +
                super.toString() +
-                ", salario=" + salario +
                 ", Qtde de projetos entregues " + projEntr +
                 '}';
     }
