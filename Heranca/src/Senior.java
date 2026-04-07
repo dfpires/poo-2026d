@@ -29,6 +29,6 @@ public class Senior extends Desenvolvedor{
     }
     @Override
     public double calcularBonus(){
-        return this.calcularBonus() + this.salario * 0.15 + this.verbaLideranca;
+        return super.calcularBonus() + this.salario * 0.15 + this.verbaLideranca;
     }
 }

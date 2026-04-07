@@ -1,4 +1,4 @@
-public class Desenvolvedor {
+public abstract class Desenvolvedor {
     protected String nome;
     protected String linguagem;
     protected float salario;
@@ -42,9 +42,9 @@ public class Desenvolvedor {
                 ", salario=" + salario +
                 '}';
     }
-    public void codar(){
-        System.out.println("Desenvolvedor escrevendo código ...");
-    }
+    public abstract void codar();
+
+    // não pode ser abstrato pois Junior não o implementa
     public double calcularBonus(){
         return this.salario * 0.05;
     }
