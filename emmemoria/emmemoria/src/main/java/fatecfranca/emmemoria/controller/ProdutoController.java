@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 // controla as requisições do endpoint /produtos
 @RequestMapping("/produtos")
-
 public class ProdutoController {
 
     @Autowired // injeção de dependência
@@ -21,6 +20,7 @@ public class ProdutoController {
     // vamos criar um método para o verbo GET
     @GetMapping
     public ResponseEntity<List<Produto>> listar(){
+
         return ResponseEntity.ok(service.listar());
     }
 
@@ -31,5 +31,18 @@ public class ProdutoController {
         // URI - Uniform Resource Identifier
         URI uri = URI.create("/produto/" + criado.getId());
         return ResponseEntity.created(uri).body(criado);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Boolean> remover(@PathVariable Long id){
+        return ResponseEntity.ok(service.remover(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Produto> atualizar(@PathVariable Long id,
+                                             @RequestBody Produto novo){
+        Produto prod = service.atualiza(id, novo);
+        return (prod != null) ? ResponseEntity.ok(prod) :
+        ResponseEntity.notFound().build();
     }
 }
