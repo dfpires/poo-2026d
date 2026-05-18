@@ -9,8 +9,9 @@ import java.util.List;
 
 @Service
 public class ProdutoService {
-    private final ProdutoRepository repo;
 
+    private final ProdutoRepository repo;
+    // injeção de dependência ocorre pelo construtor
     public ProdutoService(ProdutoRepository repo){
         this.repo = repo;
     }
